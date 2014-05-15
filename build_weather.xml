@@ -1,0 +1,15 @@
+<project name="antsimple" default="dist" basedir=".">
+    <target name="dist" description="generate the distribution">
+        <jar jarfile="TeitelbaumWeather.jar">
+            <zipgroupfileset dir="libs" includes="**/*.jar"/>
+            <manifest>
+                <attribute name="Main-Class" 
+                    value="teitelbaum.weather.WeatherFrame"/>
+            </manifest>
+            <fileset dir="./bin">
+                <include name="teitelbaum/weather/*.class" />
+                <include name="teitelbaum/weather/*.txt" />
+            </fileset>
+        </jar>
+    </target>
+</project>
