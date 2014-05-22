@@ -1,0 +1,15 @@
+<project name="antsimple" default="dist" basedir=".">
+    <target name="dist" description="generate the distribution">
+        <jar jarfile="TeitelbaumEarthquake.jar">
+            <zipgroupfileset dir="libs" includes="**/*.jar"/>
+            <manifest>
+                <attribute name="Main-Class" 
+                    value="teitelbaum.earthquakes.ShowEarthquakes"/>
+            </manifest>
+            <fileset dir="./bin">
+                <include name="teitelbaum/earthquakes/*.class" />
+                <include name="teitelbaum/earthquakes/*.txt" />
+            </fileset>
+        </jar>
+    </target>
+</project>
