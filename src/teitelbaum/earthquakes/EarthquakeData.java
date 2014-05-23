@@ -15,7 +15,4 @@ public class EarthquakeData
 	public String toString() {
 		return magnitude + " " + location;
 	}
-	
-	
-	
 }

@@ -8,12 +8,14 @@ import java.net.URLConnection;
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 
-public class DownloadQuakesThread extends Thread {
+public class DownloadQuakesThread extends Thread 
+{
 	private static final String FEED_URL = "http://earthquake-report.com/feeds/recent-eq?json";
 	private EarthquakeList quakes;
 	private ShowEarthquakes window;
 
-	public DownloadQuakesThread(ShowEarthquakes window) {
+	public DownloadQuakesThread(ShowEarthquakes window) 
+	{
 		this.window = window;
 	}
 

@@ -10,7 +10,6 @@ import javax.swing.JList;
 public class ShowEarthquakes extends JFrame 
 {
 	DefaultListModel<EarthquakeData> listModel;
-	//EarthquakeList quakes;
 	JList<EarthquakeData> quakeList;
 	
 	public ShowEarthquakes() 
@@ -22,7 +21,8 @@ public class ShowEarthquakes extends JFrame
 		
 		listModel = new DefaultListModel<EarthquakeData>();
 		quakeList = new JList<EarthquakeData>(listModel);
-		quakeList.setCellRenderer(new DefaultListCellRenderer() {
+		quakeList.setCellRenderer(new DefaultListCellRenderer() 
+		{
 
             @Override
             public Component getListCellRendererComponent(JList list, Object value, int index,
