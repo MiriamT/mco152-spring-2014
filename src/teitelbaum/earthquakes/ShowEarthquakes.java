@@ -2,7 +2,6 @@ package teitelbaum.earthquakes;
 
 import java.awt.Color;
 import java.awt.Component;
-
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.DefaultListModel;
 import javax.swing.JFrame;
@@ -21,7 +20,6 @@ public class ShowEarthquakes extends JFrame
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
-		//quakes = new EarthquakeList();
 		listModel = new DefaultListModel<EarthquakeData>();
 		quakeList = new JList<EarthquakeData>(listModel);
 		quakeList.setCellRenderer(new DefaultListCellRenderer() {
@@ -72,18 +70,9 @@ public class ShowEarthquakes extends JFrame
                  {
                 	 setBackground(Color.decode("#CC0000"));
                  }
-                 
-                 
-                 
-                 
                  return c;
             }
-
        });
-		
-		
-		
-		
 		
 		
 		add(quakeList);
@@ -91,7 +80,6 @@ public class ShowEarthquakes extends JFrame
 		DownloadQuakesThread thread = new DownloadQuakesThread(this);
 		thread.start();
 	}
-	
 	
 	public static void main(String[] args)
 	{
@@ -106,6 +94,5 @@ public class ShowEarthquakes extends JFrame
 		{
 			listModel.addElement(data);
 		}
-		
 	}
 }

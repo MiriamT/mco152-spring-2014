@@ -18,7 +18,8 @@ public class DownloadQuakesThread extends Thread {
 	}
 
 	@Override
-	public void run() {
+	public void run() 
+	{
 		super.run();
 		Gson gson = new Gson();
 		while (true) 
@@ -32,7 +33,6 @@ public class DownloadQuakesThread extends Thread {
 				final JsonReader jsonReader = new JsonReader(
 						new InputStreamReader(in));
 				jsonReader.setLenient(true);
-				//jsonReader.nextString();
 
 				quakes = gson.fromJson(jsonReader, EarthquakeList.class);
 				window.refresh(quakes);
@@ -43,11 +43,8 @@ public class DownloadQuakesThread extends Thread {
 			try {
 				sleep(60000);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
-
 	}
-
 }
