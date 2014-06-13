@@ -1,0 +1,15 @@
+<project name="antsimple" default="dist" basedir=".">
+    <target name="dist" description="generate the distribution">
+        <jar jarfile="TeitelbaumNASA.jar">
+            <zipgroupfileset dir="libs" includes="**/*.jar"/>
+            <manifest>
+                <attribute name="Main-Class" 
+                    value="teitelbaum.nasa.NasaFrame"/>
+            </manifest>
+            <fileset dir="./bin">
+                <include name="teitelbaum/nasa/*.class" />
+                <include name="teitelbaum/nasa/*.txt" />
+            </fileset>
+        </jar>
+    </target>
+</project>

@@ -1,4 +1,4 @@
-package teitelbaum.flicker;
+package teitelbaum.nasa;
 
 import java.awt.Image;
 import java.io.IOException;
